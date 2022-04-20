@@ -6,4 +6,4 @@
 + The data is structured as documented on [Vlaamse Codex Application Profile](https://data.vlaanderen.be/doc/applicatieprofiel/vlaamse-codex/)
 + The endpoint is available on [SPARQL](https://codex.vlaanderen.be/sparql)
 
-> The frontend should be built using [Ember.js](https://emberjs.com/)
+The frontend is built using [Ember.js](https://emberjs.com/)
