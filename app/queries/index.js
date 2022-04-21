@@ -9,7 +9,8 @@ SELECT DISTINCT * WHERE {
           el:is_realized_by ?published.
 
   ?published el:date_publication ?date;
-                     el:title ?title.
+                   el:id_local ?itemid;
+                       el:title ?title.
  }
 ORDER BY DESC(?date)
 LIMIT 5`

@@ -13,9 +13,10 @@ export default class IndexRoute extends Route {
         let article = model.article;
         let date = model.date;
         let title = model.title;
+        let itemid = model.itemid;
         let published = model.published;
         title.value = decode(title.value);
-        return { article, date, published, title };
+        return { article, date, published, itemid, title };
       });
     }
   }
