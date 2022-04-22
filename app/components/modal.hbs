@@ -6,13 +6,7 @@
         <h5 class="modal-title" id="detailsModalLabel">Modal title</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body" id="content-wrapper">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary d-none">Save changes</button>
-      </div>
+      <div class="modal-body" id="content-wrapper"></div>
     </div>
   </div>
 </div>    
@@ -26,7 +20,7 @@
                 wrapper = document.getElementById('content-wrapper'),
                 content = el.getAttribute("href"),
                 pubdate = el.getAttribute('data-pub'),
-                itemid = el.getAttribute('itemid')
+                itemid = el.getAttribute('data-id')
  
           header.innerHTML = 'Decreet no. ' + itemid + ' of ' + pubdate + ',<br>completes:'
           wrapper.innerHTML = '<iframe src=' + content + '/></iframe>'

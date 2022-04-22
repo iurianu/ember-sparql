@@ -1,36 +1,51 @@
 <article 
-    class="container my-2 py-3"
-    typeof="https://data.vlaanderen.be/id/concept/AardWetgeving/Decreet" 
-    resource={{@article.article.value}}
+    class="container my-2 py-3" itemscope="itemscope"
+    itemtype="http://data.europa.eu/eli/ontology#LegalExpression" 
+    about={{@article.article.value}}
 >
-    <h6 class="title text-secondary" property="http://data.europa.eu/eli/ontology#title">
+    <h6 class="title text-secondary" itemprop="label">
         Decreet {{@article.title.value}}
     </h6>
-    Url: 
-    <a 
-        rel="http://data.europa.eu/eli/ontology#is_realized_by" 
-        href={{@article.published.value}} 
-        target="_blank"
-    >
-        {{@article.published.value}}
-    </a>
-    <summary class="row justify-content-between align-items-center">
-        <cite class="col-6">
-            <a  class="view-modal" 
-                data-bs-toggle="modal" 
-                data-bs-target="#detailsModal" 
-                href={{@article.article.value}}
-                itemid={{@article.itemid.value}} 
-                data-pub={{@article.date.value}}
+    <blockquote class="row justify-content-between align-items-center">
+        <section 
+            class="mb-1 mb-md-2" 
+            itemprop="is_realized_by" itemscope="itemscope"
+            itemtype="http://data.europa.eu/eli/ontology#LegalResource"
             >
-                Article details &rarr;
+            Url: 
+            <a  href={{@article.published.value}} target="_blank"                                  
+                itemprop="http://purl.org/dc/terms/source" 
+            >   
+                {{@article.published.value}}
             </a>
-        </cite>
-        <p class="mb-1 publication-date col-6 text-end">
-        Date published:
-            <time property="http://data.europa.eu/eli/ontology#date_publication" datetime={{@article.date.value}} class="d-block text-success">
+        </section>
+
+        <section class="mb-1 mb-md-2 publication-date">
+            Date published:
+            <time 
+                itemprop="date_publication" 
+                datetime={{@article.date.value}} 
+                class="d-inline text-success"
+                >
                 {{@article.date.value}}
             </time>
-        </p>
-    </summary>
+        </section>    
+            
+        <cite 
+            class="mb-1 mb-md-2"
+            itemprop="amends" itemscope="itemscope"
+            itemtype="http://data.europa.eu/eli/ontology#LegalResource">
+            Amends:        
+            <a  class="view-modal" title="Click for details!"
+                itemprop="http://purl.org/dc/terms/source"
+                href={{@article.article.value}}
+                data-id={{@article.itemid.value}} 
+                data-pub={{@article.date.value}}
+                data-bs-toggle="modal" 
+                data-bs-target="#detailsModal"                  
+            >
+                {{@article.article.value}}
+            </a>
+        </cite>
+    </blockquote>
 </article>
