@@ -35,6 +35,19 @@ main {
                 text-decoration: none;
             }
         }
+        cite {
+            position: relative;
+        }
+        .tooltip-element {
+            display: inline-block;
+            background-color: gold;
+            padding: 0.01rem 0.35rem;
+            font-size: 65%;
+            position: absolute;
+            margin-left: 0.35rem;
+            border-radius: 50%;
+            cursor: pointer;
+        }
     }
 }
 

@@ -36,16 +36,17 @@
             itemprop="realizes" itemscope="itemscope"
             itemtype="http://data.europa.eu/eli/ontology#LegalResource">
             Realizes:        
-            <a  class="view-modal" title="Click for details!"
+            <a  class="view-modal" title='realizes' 
                 itemprop="http://purl.org/dc/terms/source"
                 href={{@article.article.value}}
                 data-id={{@article.itemid.value}} 
                 data-pub={{@article.date.value}}
-                data-bs-toggle="modal" 
+                data-bs-toggle="modal"                 
                 data-bs-target="#detailsModal"                  
             >
                 {{@article.article.value}}
             </a>
+            <span class="tooltip-element" data-bs-toggle="tooltip" data-bs-placement="top"  title="Click link for details!">?</span>
         </cite>
     </blockquote>
 </article>
