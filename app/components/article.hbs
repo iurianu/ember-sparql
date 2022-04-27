@@ -1,52 +1,58 @@
 <article 
-    class="container my-2 py-3" itemscope="itemscope"
+    class="container my-2 mb-3 py-3" itemscope="itemscope"
     itemtype="http://data.europa.eu/eli/ontology#LegalExpression" 
     about={{@article.article.value}}
 >
-    <h6 class="title text-secondary" itemprop="title">
+
+    <header class="mb-1 mb-md-2 px-1 publication-date">
+        Decreet No. {{@article.itemid.value}}  of
+        <time 
+            itemprop="date_publication" 
+            datetime={{@article.date.value}} 
+            class="d-inline text-success"
+            >
+            {{@article.date.value}}
+        </time>
+    </header>   
+
+    <h6 class="title text-secondary mt-2" itemprop="title">
         Decreet {{@article.title.value}}
     </h6>
-    <blockquote class="row justify-content-between align-items-center">
-        <section 
-            class="mb-1 mb-md-2" 
-            itemprop="is_realized_by" itemscope="itemscope"
-            itemtype="http://data.europa.eu/eli/ontology#LegalResource"
-            >
-            Is realized by: 
-            <a  href={{@article.published.value}} target="_blank"                                  
-                itemprop="http://purl.org/dc/terms/source" 
-            >   
-                {{@article.published.value}}
-            </a>
-        </section>
 
-        <section class="mb-1 mb-md-2 publication-date">
-            Date published:
-            <time 
-                itemprop="date_publication" 
-                datetime={{@article.date.value}} 
-                class="d-inline text-success"
+    <dl class="row justify-content-between align-items-center mb-0">
+
+        <dt class="d-inline-block">Is realized by: </dt>
+        <dd class="d-inline mb-0">
+            <cite
+                itemprop="is_realized_by" itemscope="itemscope"
+                itemtype="http://data.europa.eu/eli/ontology#LegalResource"
+            >                
+                <a  href={{@article.published.value}} target="_blank"                                  
+                    itemprop="http://purl.org/dc/terms/source" 
+                >   
+                    {{@article.published.value}}
+                </a>
+            </cite>    
+        </dd>
+             
+        <dt class="d-inline-block">Realizes: </dt>
+        <dd class="d-inline mb-0">    
+            <cite
+                itemprop="realizes" itemscope="itemscope"
+                itemtype="http://data.europa.eu/eli/ontology#LegalResource"
+            >                        
+                <a  class="view-modal" title='realizes' 
+                    itemprop="http://purl.org/dc/terms/source"
+                    href={{@article.article.value}}
+                    data-id={{@article.itemid.value}} 
+                    data-pub={{@article.date.value}}
+                    data-bs-toggle="modal"                 
+                    data-bs-target="#detailsModal"                  
                 >
-                {{@article.date.value}}
-            </time>
-        </section>    
-            
-        <cite 
-            class="mb-1 mb-md-2"
-            itemprop="realizes" itemscope="itemscope"
-            itemtype="http://data.europa.eu/eli/ontology#LegalResource">
-            Realizes:        
-            <a  class="view-modal" title='realizes' 
-                itemprop="http://purl.org/dc/terms/source"
-                href={{@article.article.value}}
-                data-id={{@article.itemid.value}} 
-                data-pub={{@article.date.value}}
-                data-bs-toggle="modal"                 
-                data-bs-target="#detailsModal"                  
-            >
-                {{@article.article.value}}
-            </a>
-            <span class="tooltip-element" data-bs-toggle="tooltip" data-bs-placement="top"  title="Click link for details!">?</span>
-        </cite>
-    </blockquote>
+                    {{@article.article.value}}
+                </a>
+                <span class="tooltip-element" data-bs-toggle="tooltip" data-bs-placement="top"  title="Click link for details!">?</span>
+            </cite>
+        </dd>
+    </dl>
 </article>
