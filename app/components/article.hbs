@@ -1,7 +1,7 @@
 <article 
     class="container my-2 mb-3 py-3" itemscope="itemscope"
     itemtype="http://data.europa.eu/eli/ontology#LegalExpression" 
-    about={{@article.article.value}}
+    about={{@article.published.value}}
 >
 
     <header class="mb-1 mb-md-2 px-1 publication-date">
@@ -27,8 +27,9 @@
                 itemprop="is_realized_by" itemscope="itemscope"
                 itemtype="http://data.europa.eu/eli/ontology#LegalResource"
             >                
-                <a  href={{@article.published.value}} target="_blank"                                  
-                    itemprop="http://purl.org/dc/terms/source" 
+                <a  href={{@article.published.value}} target="_blank" 
+                    rel="tag" title='is realized by'            
+                    itemprop="http://purl.org/dc/terms/source"
                 >   
                     {{@article.published.value}}
                 </a>
@@ -41,7 +42,7 @@
                 itemprop="realizes" itemscope="itemscope"
                 itemtype="http://data.europa.eu/eli/ontology#LegalResource"
             >                        
-                <a  class="view-modal" title='realizes' 
+                <a  class="view-modal" title='realizes' rel="tag"
                     itemprop="http://purl.org/dc/terms/source"
                     href={{@article.article.value}}
                     data-id={{@article.itemid.value}} 
