@@ -5,7 +5,7 @@
   "description": "Small description for vlaanderen goes here",
   "repository": "https://github.com/iurianu/ember-sparql.git",
   "license": "MIT",
-  "author": "Iulian Andriescu",
+  "author": "Iulian Andriescu <iulianandriescu@gmail.com>",
   "directories": {
     "doc": "doc",
     "test": "tests"
