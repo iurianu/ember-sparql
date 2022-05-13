@@ -7,6 +7,7 @@
 + The endpoint is available on [SPARQL](https://codex.vlaanderen.be/sparql)
 
 > The frontend is built using [Ember.js](https://emberjs.com/)
+
 > Styling is made with Twitter Bootstrap 5.1.3, and SCSS (for custom styles)
 
 ## Engines
