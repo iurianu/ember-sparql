@@ -4,9 +4,9 @@
 
 + The data is available via the SPARQL endpoint of the [Vlaamse Codex](https://www.vlaanderen.be/de-vlaamse-codex)
 + The data is structured as documented on [Vlaamse Codex Application Profile](https://data.vlaanderen.be/doc/applicatieprofiel/vlaamse-codex/)
-+ The endpoint is available on [![SPARQL](https://www.geocat.net/wp-content/uploads/2015/03/blog-spparql.png)](https://codex.vlaanderen.be/sparql)
++ The endpoint is available on [SPARQL](https://codex.vlaanderen.be/sparql)
 
-> The frontend is built using ![https://upload.wikimedia.org/wikipedia/commons/2/27/Ember-logo.png](https://emberjs.com/)
+> The frontend is built using [Ember.js](https://emberjs.com/)
 
 > Styling is made with Twitter Bootstrap 5.1.3, and SCSS (for custom styles)
 
